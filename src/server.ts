@@ -16,8 +16,6 @@ import { nextTick } from 'process';
  
   app.get( "/filteredimage", ( req: Request, res: Response ) => {
     const image_url  = req.query.image_url;
-    console.log(image_url);
-
     if ( !image_url ) {
       return res.status(400).send("image_url is required");
     }
